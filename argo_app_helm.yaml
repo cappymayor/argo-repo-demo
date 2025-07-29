@@ -1,8 +1,8 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: prom
-  namespace: argocd
+  name: prometheus
+  namespace: default
   annotations:
     argocd.argoproj.io/sync-wave: "-3"
   finalizers:
@@ -21,16 +21,14 @@ spec:
           value: Production
     
       valueFiles: 
-      - helm_path/values.yaml
+      - values.yaml
 
 
   destination:
     server: https://kubernetes.default.svc
+    namespace: default
 
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
-
-    syncOptions:
-    - CreateNamespace=true
