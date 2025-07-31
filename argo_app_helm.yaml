@@ -10,9 +10,9 @@ metadata:
 spec:
   project: default
   source:
-    repoURL: https://github.com/cappymayor/prometheus-setup.git
+    repoURL: https://github.com/cappymayor/argo-helm-upstream.git
     targetRevision: HEAD
-    path: helm_path
+    path: application
 
     helm:
       releaseName: prometheus
