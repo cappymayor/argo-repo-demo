@@ -14,7 +14,7 @@ spec:
         app: guestbook-ui
     spec:
       containers:
-        - image: 049417293525.dkr.ecr.eu-central-1.amazonaws.com/airflow:main-6a8835f2ecc18597bfc3c3fc2d51025d36da52d6
+        - image: 049417293525.dkr.ecr.eu-central-1.amazonaws.com/airflow:
           name: guestbook-ui
           ports:
             - containerPort: 80
